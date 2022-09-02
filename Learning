@@ -1,0 +1,48 @@
+print(">number \n>>operation\n+ - * /\ninput 0 to stop")
+
+Operator = str
+Number = float(0)
+Previous_Number = float
+First_time = int(1)
+
+def soma(Number, Previous_Number):
+    print("soma", Number + Previous_Number)
+    return(Number + Previous_Number)
+
+
+while(1==1):
+    if(First_time!=1):
+        Operator = str(input(">>"))
+        Number = float(input(">"))
+        if((Operator=="0")or(Number==0)):
+            print(Previous_Number)
+            break
+        if(Operator == "+"):
+            print(Previous_Number + Number)
+            Previous_Number = Previous_Number + Number
+        if(Operator == "-"):
+            print(Previous_Number - Number)
+            Previous_Number = Previous_Number - Number
+        if(Operator == "*"):
+            print(Previous_Number * Number)
+            Previous_Number = Previous_Number * Number
+        if(Operator == "/"):
+            print(Previous_Number / Number)
+            Previous_Number = Previous_Number / Number
+    else:
+        Previous_Number = float(input(">"))
+        Operator = str(input(">>"))
+        Number = float(input(">"))
+        if(Operator == "+"):
+            print(Previous_Number + Number)
+            Previous_Number = Previous_Number + Number
+        if(Operator == "-"):
+            print(Previous_Number - Number)
+            Previous_Number = Previous_Number - Number
+        if(Operator == "*"):
+            print(Previous_Number * Number)
+            Previous_Number = Previous_Number * Number
+        if(Operator == "/"):
+            print(Previous_Number / Number)
+            Previous_Number = Previous_Number / Number
+    First_time = 0
